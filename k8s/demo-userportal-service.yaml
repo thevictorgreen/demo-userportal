@@ -6,8 +6,8 @@ spec:
   selector:
     app: demo-userportal
   ports:
-    type: NodePort
     - port: 31001
       nodePort: 31001
       targetPort: nginx-port
       protocol: TCP
+      type: NodePort
