@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta
+kind: Deployment
+metadata:
+  name: demo-userportal-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: demo-userportal
+    spec:
+      containers:
+        - name: demo-userportal
+          image: vdigital/demo-userportal:e4132379
+          ports:
+            - name: nginx-port
+              containerPort: 80
