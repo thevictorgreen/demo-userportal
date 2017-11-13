@@ -10,4 +10,6 @@ spec:
       nodePort: 31001
       targetPort: nginx-port
       protocol: TCP
-      type: NodePort
+    selector:
+      app: demo-userportal
+    type: NodePort
