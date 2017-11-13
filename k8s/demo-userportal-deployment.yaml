@@ -2,8 +2,13 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: demo-userportal-deployment
+  labels:
+    app: demo-userportal
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: demo-userportal
   template:
     metadata:
       labels:
